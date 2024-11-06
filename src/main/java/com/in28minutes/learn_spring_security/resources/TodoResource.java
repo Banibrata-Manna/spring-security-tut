@@ -30,8 +30,7 @@ public class TodoResource {
 	public void createTodoforSpecificUser(@PathVariable("username") String username,
 			@RequestBody Todo todo) {
 		logger.info("Create {} for {}", todo, username);
-		TODOS_LIST.add(todo);
 	}
 }
 
-record Todo(String uername, String description) {}
+record Todo(String username, String description) {}
